@@ -1,0 +1,19 @@
+extends ../layout.pug 
+
+block content
+  .index-pg
+
+    include ../../components/header/header
+    +header
+
+    include ./components/banner-slider/banner-slider
+    +banner-slider('index-pg')
+
+    include ./components/products/products
+    +products
+
+    include ./components/about/about
+    +about
+
+    include ../../components/footer/footer
+    +footer

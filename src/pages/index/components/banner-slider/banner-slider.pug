@@ -1,0 +1,36 @@
+mixin banner-slider(mixes)
+  section.banner-slider(class=(mixes) && `${mixes}__banner-slider` )
+    -
+      var slides = [
+        {
+          img: require('./components/banner-slider/img/banners/1.png'),
+          title: 'Norma',
+          text: 'В коллекции Norma мы собрали все востребованные продукты в самом практичном дизайне, который точно подойдет Вашему интерьеру и останется актуальным на долгие годы.'
+        }
+      ]
+
+    each slide in slides
+      img.banner-slider__slide-img(src=`${slide.img}`)
+
+    ul.banner-slider__dots-group
+      each dot, idx in [1, 2, 3, 4, 5]
+        if (idx === 0)
+          li.banner-slider__dot.banner-slider__dot--active
+        li.banner-slider__dot
+
+    .banner-slider__body
+      h6.banner-slider__subtitle Коллекция
+
+      each slide in slides
+        .banner-slider__content
+          h5.banner-slider__title= slide.title
+          p.banner-slider__para= slide.text
+
+      .banner-slider__btn-group
+        button.banner-slider__btn-prev.banner-slider__btn-prev--disabled(type='button')
+          img(src=require('./components/banner-slider/img/arrow.svg'))
+        button.banner-slider__btn-next(type='button')
+          img(src=require('./components/banner-slider/img/arrow.svg'))
+
+   
+        

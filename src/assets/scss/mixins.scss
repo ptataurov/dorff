@@ -1,0 +1,58 @@
+$sm: 575.98px;
+$md: 767.98px;
+$lg: 991.98px;
+$xl: 1199.98px;
+
+@mixin importFont($weight) {
+  @font-face {
+    font-weight: $weight;
+    font-family: 'Gotham Pro';
+    font-display: swap;
+    font-style: normal;
+    @content;
+  }
+}
+
+@mixin mq-less-sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin mq-less-md {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mq-less-lg {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin mq-less-xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin name {
+  max-width: 1600px;
+}
+
+@mixin container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 1309.98px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@mixin img-resp {
+  width: 100%;
+  height: auto;
+}

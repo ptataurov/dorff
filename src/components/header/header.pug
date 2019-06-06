@@ -1,0 +1,12 @@
+mixin header
+  header.header
+    a.header__logo-link(href='/')
+      img.header__logo(src=require('../../assets/img/logo.svg') alt='Логотип')
+    nav.header__nav
+      each link in ['О бренде', 'Каталог', 'Где купить', 'Обслуживание']
+        a.header__nav-link(href='#')= link
+    .header__bar
+      .header__bar-location
+        include ~@/components/header/img/placeholder.svg
+      .header__bar-search
+        include ~@/components/header/img/search.svg

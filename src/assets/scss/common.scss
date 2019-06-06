@@ -1,0 +1,37 @@
+@import '~normalize.css/normalize.css';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+
+*,
+*:before,
+*:after {
+  transition: all 200ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+body {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #1d1d1b;
+  font-family: 'Gotham Pro', sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  line-height: 1;
+}

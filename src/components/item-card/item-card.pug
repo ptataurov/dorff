@@ -1,0 +1,7 @@
+mixin item-card(card)
+  .item-card
+    .item-card__img-container
+      img.item-card__img(src=`${card.img}` alt='Изображение товара')
+    p.item-card__number= card.number
+    p.item-card__name= card.name
+    p.item-card__desc= card.desc

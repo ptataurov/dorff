@@ -1,0 +1,38 @@
+.item-card__img-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 60px;
+  background-color: #f2f2f2;
+}
+
+.item-card__img {
+  @include img-resp;
+}
+
+.item-card__number {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: #d42425;
+}
+
+.item-card__name {
+  margin-bottom: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.item-card__desc {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,11 @@
+@include importFont(400) {
+  src: url(~@/assets/fonts/ttf/GothamPro.ttf) format('truetype');
+}
+
+@include importFont(500) {
+  src: url(~@/assets/fonts/ttf/GothamPro-Medium.ttf) format('truetype');
+}
+
+@include importFont(700) {
+  src: url(~@/assets/fonts/ttf/GothamPro-Bold.ttf) format('truetype');
+}
