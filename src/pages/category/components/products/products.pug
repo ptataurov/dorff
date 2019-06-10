@@ -1,0 +1,63 @@
+mixin products
+  section.products
+    -
+      var products = [
+        {
+          img: require('./components/products/img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/3.png'),
+          number: 'D1010000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        },
+        {
+          img: require('./components/products/img/3.png'),
+          number: 'D1020000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        },
+        {
+          img: require('./components/products/img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./components/products/img/3.png'),
+          number: 'D1010000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        }
+      ]
+
+    each item in products
+      include ~@/components/item-card/item-card
+      +item-card(item)

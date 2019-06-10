@@ -2,6 +2,7 @@
   display: flex;
   @include max-width;
   flex-wrap: wrap;
+  border-bottom: 1px solid #f2f2f2;
 
   &--nav-show {
     align-content: flex-start;

@@ -1,0 +1,8 @@
+mixin page-desc(text)
+  .page-desc
+    .page-desc__container
+      p.page-desc__content= text
+      
+      include ~@/components/dots/dots
+      +dots
+    

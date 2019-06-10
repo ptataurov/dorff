@@ -1,0 +1,10 @@
+mixin breadcrumbs
+  .breadcrumbs
+    ul.breadcrumbs__list
+      each item, idx in ['Главная', 'Каталог', 'Смесители для кухни']
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href='#')= item
+          if idx !== 2
+            ul.breadcrumbs__dots-group
+              each dot in [1, 2]
+                li.breadcrumbs__dot

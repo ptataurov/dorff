@@ -1,0 +1,24 @@
+extends ../layout.pug 
+
+block content
+  
+  .category-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs
+
+    include ./components/title/title
+    +title('Смесители для кухни')
+
+    include ../../components/page-desc/page-desc
+    +page-desc('Кухня – сердце дома. Мы хотим, чтобы вам не приходилось ломать голову, как оснастить ее раз и навсегда без ущерба для семейного бюджета. В линейке смесителей для кухни Dorff представлены продукты на любой вкус, различные по дизайну и функционалу, но все их отличает крайне привлекательная цена и внушительная гарантия 5 лет на картридж, корпус и покрытие.')
+
+    include ./components/products/products
+    +products
+
+
+    include ../../components/footer/footer
+    +footer

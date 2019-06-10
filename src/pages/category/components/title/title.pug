@@ -1,0 +1,5 @@
+mixin title(title)
+  .title
+    img.title__bg(src=require('./components/title/img/bg.png') alt='Фон')
+    include ~@/components/page-title/page-title
+    +page-title(title, 'category-pg')

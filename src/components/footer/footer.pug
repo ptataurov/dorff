@@ -27,6 +27,5 @@ mixin footer
     
     .footer__bottom
       p.footer__copyright © Dorff 2019
-      ul.footer__dots-group
-        each dot in [1, 2]
-          li.footer__dot
+      include ~@/components/dots/dots
+      +dots

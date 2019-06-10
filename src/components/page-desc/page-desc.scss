@@ -1,0 +1,17 @@
+.page-desc {
+  @include max-width;
+  margin-bottom: 60px;
+  padding: 60px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.page-desc__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include container;
+}
+
+.page-desc__content {
+  max-width: 980px;
+}

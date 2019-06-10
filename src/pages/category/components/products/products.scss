@@ -1,0 +1,57 @@
+// Common components imports
+@import '~@/components/item-card/item-card';
+
+// Styles
+
+.category-pg {
+  .products {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 140px;
+
+    .item-card {
+      flex: 1;
+      flex-basis: 33.333333%;
+      box-sizing: content-box;
+      max-width: 386px;
+      padding-top: 30px;
+
+      &:nth-child(3n + 2) {
+        padding-right: 30px;
+        padding-left: 30px;
+        border-right: 1px solid #f2f2f2;
+        border-left: 1px solid #f2f2f2;
+      }
+
+      &:nth-child(3n + 1) {
+        padding-right: 30px;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-left: 30px;
+      }
+    }
+
+    .item-card__img-container {
+      height: 340px;
+      background-color: transparent;
+    }
+
+    .item-card__name {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-card__desc {
+      padding-bottom: 20px;
+      border-bottom: 1px solid#f2f2f2;
+
+      // &:nth-child(1n + 6) {
+      //   padding-bottom: 0;
+      //   border-bottom: none;
+      // }
+    }
+  }
+}
