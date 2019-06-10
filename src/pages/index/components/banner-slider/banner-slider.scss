@@ -1,8 +1,5 @@
 .banner-slider {
   position: relative;
-  display: flex;
-  width: 100%;
-  height: 780px;
 }
 
 .banner-slider__body {
@@ -12,6 +9,16 @@
   max-width: 625px;
   color: #fff;
   transform: translate(-50%, -50%);
+
+  @include mq-less-lg {
+    position: static;
+    clear: both;
+    max-width: none;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: inherit;
+    transform: none;
+  }
 }
 
 .banner-slider__subtitle {
@@ -20,25 +27,39 @@
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+
+  @include mq-less-sm {
+    margin-bottom: 10px;
+  }
 }
 
 .banner-slider__title {
   margin-bottom: 40px;
   font-size: 96px;
+  line-height: 1;
+  word-break: break-all;
+
+  @include mq-less-sm {
+    margin-bottom: 20px;
+  }
 }
 
 .banner-slider__slide-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
+
+  @include mq-less-lg {
+    float: left;
+  }
 }
 
 .banner-slider__para {
   margin-bottom: 90px;
   font-weight: 400;
+
+  @include mq-less-sm {
+    margin-bottom: 45px;
+  }
 }
 
 .banner-slider__btn-prev {
@@ -56,12 +77,30 @@
     cursor: auto;
     opacity: 0.5;
   }
+
+  @include mq-less-lg {
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
 }
 
 .banner-slider__dots-group {
-  align-self: center;
+  position: absolute;
+  top: 50%;
   padding: 40px 26px;
   background-color: #d42425;
+  transform: translateY(-50%);
+
+  @include mq-less-lg {
+    position: static;
+    display: inline-block;
+    float: right;
+    padding: 26px 40px;
+    transform: translateY(-40%);
+  }
 }
 
 .banner-slider__dot {
@@ -74,6 +113,10 @@
 
   &:not(:last-child) {
     margin-bottom: 30px;
+    @include mq-less-lg {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
@@ -83,5 +126,9 @@
   &--active {
     background-color: transparent;
     cursor: auto;
+  }
+
+  @include mq-less-lg {
+    display: inline-block;
   }
 }

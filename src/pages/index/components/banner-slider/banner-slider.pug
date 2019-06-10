@@ -11,7 +11,6 @@ mixin banner-slider(mixes)
 
     each slide in slides
       img.banner-slider__slide-img(src=`${slide.img}`)
-
     ul.banner-slider__dots-group
       each dot, idx in [1, 2, 3, 4, 5]
         if (idx === 0)
@@ -28,9 +27,9 @@ mixin banner-slider(mixes)
 
       .banner-slider__btn-group
         button.banner-slider__btn-prev.banner-slider__btn-prev--disabled(type='button')
-          img(src=require('./components/banner-slider/img/arrow.svg'))
+          include ./img/arrow.svg
         button.banner-slider__btn-next(type='button')
-          img(src=require('./components/banner-slider/img/arrow.svg'))
+          include ./img/arrow.svg
 
    
         

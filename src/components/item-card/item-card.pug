@@ -1,5 +1,5 @@
 mixin item-card(card)
-  .item-card
+  a.item-card(href='#')
     .item-card__img-container
       img.item-card__img(src=`${card.img}` alt='Изображение товара')
     p.item-card__number= card.number

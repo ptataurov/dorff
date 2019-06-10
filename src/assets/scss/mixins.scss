@@ -37,8 +37,10 @@ $xl: 1199.98px;
   }
 }
 
-@mixin name {
+@mixin max-width {
   max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @mixin container {

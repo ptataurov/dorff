@@ -2,6 +2,8 @@ mixin header
   header.header
     a.header__logo-link(href='/')
       img.header__logo(src=require('../../assets/img/logo.svg') alt='Логотип')
+    .header__toggle-nav
+      span.header__toggle-nav-inner
     nav.header__nav
       each link in ['О бренде', 'Каталог', 'Где купить', 'Обслуживание']
         a.header__nav-link(href='#')= link
