@@ -5,11 +5,20 @@
   font-size: 40px;
   line-height: 1;
 
+  @include mq-less-md {
+    font-size: 24px;
+  }
+
   &:before {
     width: 120px;
     height: 40px;
     margin-right: 40px;
     background-color: #df2727;
     content: '';
+
+    @include mq-less-md {
+      width: 60px;
+      margin-right: 20px;
+    }
   }
 }

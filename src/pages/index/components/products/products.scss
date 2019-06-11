@@ -7,12 +7,22 @@
     flex-wrap: wrap;
     margin-bottom: 80px;
 
+    &:hover {
+      .item-card {
+        opacity: 0.5;
+      }
+    }
+
     @include mq-less-lg {
       margin-bottom: 40px;
     }
 
     .item-card {
       flex: 1;
+
+      &:hover {
+        opacity: 1;
+      }
 
       @include mq-less-lg {
         flex-basis: 50%;

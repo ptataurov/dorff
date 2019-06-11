@@ -10,8 +10,16 @@
   justify-content: space-between;
   align-items: flex-end;
   @include container;
+
+  @include mq-less-lg {
+    flex-direction: column;
+  }
 }
 
 .page-desc__content {
   max-width: 980px;
+
+  @include mq-less-lg {
+    margin-bottom: 20px;
+  }
 }

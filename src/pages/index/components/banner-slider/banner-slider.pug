@@ -6,24 +6,36 @@ mixin banner-slider(mixes)
           img: require('./components/banner-slider/img/banners/1.png'),
           title: 'Norma',
           text: 'В коллекции Norma мы собрали все востребованные продукты в самом практичном дизайне, который точно подойдет Вашему интерьеру и останется актуальным на долгие годы.'
+        },
+        {
+          img: require('./components/banner-slider/img/banners/1.png'),
+          title: 'Logic',
+          text: 'В коллекции Logic мы собрали все востребованные продукты в самом практичном дизайне, который точно подойдет Вашему интерьеру и останется актуальным на долгие годы.'
+        },
+        {
+          img: require('./components/banner-slider/img/banners/1.png'),
+          title: 'Logic 2',
+          text: 'В коллекции Logic 2 мы собрали все востребованные продукты в самом практичном дизайне, который точно подойдет Вашему интерьеру и останется актуальным на долгие годы.'
         }
       ]
 
-    each slide in slides
-      img.banner-slider__slide-img(src=`${slide.img}`)
+    each slide, idx in slides
+      img.banner-slider__slide-img(src=`${slide.img}` class=(idx == 0 && 'banner-slider__slide-img--show') data-title=`${slide.title}` data-text=`${slide.text}`)
     ul.banner-slider__dots-group
-      each dot, idx in [1, 2, 3, 4, 5]
+      each dot, idx in slides
         if (idx === 0)
           li.banner-slider__dot.banner-slider__dot--active
-        li.banner-slider__dot
+        else
+          li.banner-slider__dot
 
     .banner-slider__body
       h6.banner-slider__subtitle Коллекция
 
-      each slide in slides
-        .banner-slider__content
-          h5.banner-slider__title= slide.title
-          p.banner-slider__para= slide.text
+      each slide, idx in slides
+        if idx == 0
+          .banner-slider__content
+            h5.banner-slider__title= slide.title
+            p.banner-slider__para= slide.text
 
       .banner-slider__btn-group
         button.banner-slider__btn-prev.banner-slider__btn-prev--disabled(type='button')
