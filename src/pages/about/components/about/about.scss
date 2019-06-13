@@ -1,0 +1,305 @@
+// Common components imports
+@import '~@/components/dots/dots';
+
+// Styles
+
+.about {
+  @include max-width;
+}
+
+.about__1,
+.about__2,
+.about__3,
+.about__4 {
+  display: flex;
+
+  & * {
+    flex-basis: 50%;
+  }
+}
+
+.about__para {
+  color: #1d1d1b;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about__big-para {
+  color: #1d1d1b;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.about__1 {
+  margin-bottom: 60px;
+
+  @include mq-less-xl {
+    flex-wrap: wrap;
+
+    & * {
+      flex-basis: 100%;
+    }
+  }
+
+  .about__img-container {
+    padding-right: 60px;
+    text-align: right;
+
+    @include mq-less-xl {
+      margin-bottom: 30px;
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  .about__img {
+    @include mq-less-sm {
+      @include img-resp;
+    }
+  }
+
+  .about__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 624px;
+    margin-right: 60px;
+
+    @include mq-less-xl {
+      max-width: none;
+      margin: 0 15px;
+    }
+  }
+
+  .about__para {
+    margin-bottom: 40px;
+  }
+}
+
+.about__2 {
+  margin-right: 40px;
+  margin-bottom: 74px;
+  margin-left: 40px;
+
+  @include mq-less-xl {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & * {
+      flex-basis: 100%;
+    }
+  }
+
+  @include mq-less-md {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .about__content {
+    display: flex;
+    align-items: center;
+    width: 776px;
+    margin-top: 60px;
+    padding: 60px;
+    background-color: #f2f2f2;
+
+    @include mq-less-xl {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .about__para {
+    flex: 1;
+    max-width: 594px;
+    margin-left: auto;
+
+    @include mq-less-xl {
+      max-width: none;
+      margin-left: 0;
+    }
+  }
+
+  .about__img-container {
+    position: relative;
+
+    @include mq-less-xl {
+      display: flex;
+      flex: 0;
+      justify-content: center;
+    }
+
+    @include mq-less-sm {
+      flex: 1;
+      flex-basis: 100%;
+    }
+
+    &:after {
+      position: absolute;
+      right: -40px;
+      bottom: -30px;
+      width: 160px;
+      height: 60px;
+      background-color: #df2727;
+      opacity: 0.9;
+      content: '';
+
+      @include mq-less-xl {
+        right: 80px;
+        display: flex;
+        flex: 0;
+        justify-content: center;
+      }
+
+      @include mq-less-sm {
+        right: 20px;
+      }
+    }
+  }
+
+  .about__img {
+    display: block;
+
+    @include mq-less-xl {
+      flex: 0;
+    }
+
+    @include mq-less-sm {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.about__3 {
+  margin-bottom: 100px;
+
+  @include mq-less-xl {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    & * {
+      flex-basis: 100%;
+    }
+  }
+
+  .about__img-container {
+    display: flex;
+    margin-top: 60px;
+
+    @include mq-less-xl {
+      flex-basis: auto;
+    }
+  }
+
+  .about__img {
+    padding-left: 160px;
+
+    @include mq-less-xl {
+      width: 100%;
+      height: 100%;
+      padding: 0 15px;
+    }
+  }
+
+  .about__content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 160px;
+    background-color: #f2f2f2;
+
+    @include mq-less-xl {
+      margin: 0;
+    }
+  }
+
+  .about__content {
+    margin-left: -60px;
+    padding-right: 60px;
+
+    @include mq-less-xl {
+      margin-left: 0;
+      padding: 60px;
+    }
+  }
+
+  .about__big-para {
+    max-width: 626px;
+    margin-bottom: 30px;
+
+    @include mq-less-xl {
+      max-width: none;
+    }
+  }
+
+  .about__para {
+    max-width: 504px;
+
+    @include mq-less-xl {
+      max-width: none;
+    }
+  }
+}
+
+.about__4 {
+  margin-bottom: 30px;
+
+  .about__para {
+    padding-right: 60px;
+    padding-left: 160px;
+
+    @include mq-less-xl {
+      flex-basis: 100%;
+      padding: 0 15px;
+    }
+  }
+}
+
+.about__slogan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 140px;
+
+  @include mq-less-xl {
+    flex-direction: column;
+    margin: 0 30px 140px;
+  }
+}
+
+.about__slogan-para {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+
+  @include mq-less-xl {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  &:before {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin-right: 40px;
+    background-color: #df2727;
+    content: '';
+
+    @include mq-less-xl {
+      margin-bottom: 10px;
+      margin-left: -30px;
+    }
+  }
+}
+
+// Mixes
+
+.about__dots {
+  align-self: flex-end;
+}

@@ -1,10 +1,11 @@
-import './product.scss'
+import './about.scss'
 
 // Common components imports
 import '../../components/header/header'
 import '../../components/footer/footer'
 import '../../components/breadcrumbs/breadcrumbs'
+import '../../components/page-title/page-title'
+import '../../components/page-desc/page-desc'
 
 // Local components imports
-import './components/product/product'
-import './components/other-products/other-products'
+import './components/about/about'

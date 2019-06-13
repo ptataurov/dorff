@@ -1,0 +1,22 @@
+extends ../layout.pug 
+
+block content
+  .about-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs(['Главная', 'О бренде'], 'about-pg')
+
+    include ../../components/page-title/page-title
+    +page-title('О бренде', 'about-pg')
+
+    include ../../components/page-desc/page-desc
+    +page-desc('Добротно, надежно и без лишних переплат  - вот, что говорят о сантехнике Dorff ее многочисленные пользователи. За 15 лет на рынке России продукция под брендом Dorff – душевые кабины и ограждения, мебель для ванной комнаты, сантехническая керамика, смесители и душевое оборудование – зарекомендовала себя как оптимальный выбор для рачительных хозяев, которые любят свой дом и знают цену своим деньгам.', 'about-pg')
+
+    include ./components/about/about
+    +about
+
+    include ../../components/footer/footer
+    +footer

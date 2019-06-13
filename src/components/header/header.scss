@@ -32,6 +32,10 @@
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: 40px;
+
+  @include mq-less-sm {
+    margin-left: 15px;
+  }
 }
 
 .header__toggle-nav {

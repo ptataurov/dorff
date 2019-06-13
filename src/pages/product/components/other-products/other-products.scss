@@ -1,0 +1,66 @@
+// Common components imports
+
+@import '~@/components/item-card/item-card';
+
+// Styles
+
+.product-pg {
+  .other-products {
+    @include container;
+    margin-bottom: 140px;
+  }
+
+  .other-products__title {
+    margin-bottom: 30px;
+    color: #1d1d1b;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .other-products__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq-less-xl {
+      justify-content: center;
+    }
+  }
+
+  .other-products__item {
+    flex-basis: 33.333333%;
+
+    @include mq-less-xl {
+      flex-basis: 100%;
+    }
+
+    &:not(:last-child) {
+      padding-right: 30px;
+      border-right: 1px solid #f2f2f2;
+
+      @include mq-less-xl {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+
+    &:not(:first-child) {
+      padding-left: 30px;
+
+      @include mq-less-xl {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .item-card__img-container {
+    height: 440px;
+    background-color: transparent;
+  }
+
+  .item-card__name {
+    border-bottom: none;
+  }
+}

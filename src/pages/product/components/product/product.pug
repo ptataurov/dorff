@@ -1,0 +1,101 @@
+mixin product(mixes)
+  section.product(class=(mixes) && `${mixes}__product`)
+    .product__wrap
+      .product__container
+        .product__slider
+          .product__slider-container
+            .product__img-container
+              img.product__img(src=require('./components/product/img/photos/1.png') alt='Изображение товара')
+            ul.product__thumbs
+              each src in [require('./components/product/img/thumbs/1.png'), require('./components/product/img/thumbs/2.png'), require('./components/product/img/thumbs/3.png'), require('./components/product/img/thumbs/1.png')]
+                li.product__thumb
+                  img.product__thumb-img(src=`${src}` alt='Маленькое изображение товара')
+
+        .product__info
+          .product__info-container
+            p.product__number D3000000
+            h1.product__title Logic
+            p.product__desc Однорычажный смеситель DORFF Logic для кухонной раковины, хром
+            ul.product__info-chars
+              -
+                var chars = [
+                  {
+                    name: 'Длина излива',
+                    char: '11,2 см'
+                  },
+                  {
+                    name: 'Подводка',
+                    char: 'гибкая G3/8'
+                  },
+                  {
+                    name: 'Размер',
+                    char: '53x176x145 мм'
+                  }
+                ]
+
+              each char in chars
+                li.product__info-char
+                  p.product__info-char-name= char.name
+                  p.product__info-char-self= char.char
+
+            ul.product__char-icons
+              each src in [require('./components/product/img/icons/1.svg'), require('./components/product/img/icons/2.svg'), require('./components/product/img/icons/3.svg'), require('./components/product/img/icons/4.svg'), require('./components/product/img/icons/5.svg'), require('./components/product/img/icons/6.svg')]
+                li.product__char-icon
+                  img.product__char-icon-img(src=`${src}` alt='Иконка')
+            .product__info-bottom
+              .product__near-shop
+                img.product__nav-icon(src=require('./components/product/img/icons/navigation.svg') alt='Иконка навигации')
+                .product__near-shop-group
+                  p.product__near-shop-title Ближайший к вам магазин:
+                  a.product__near-shop-link(href='#') OBI Отрадное
+              button.product__btn-where-buy(type='button') Где купить
+
+    .product__chars-block
+      h3.product__chars-title Характеристики
+      ul.product__chars
+        -
+          var chars = [
+            {
+              name: 'Монтаж',
+              char: 'горизонтальный (стандартный)'
+            },
+            {
+              name: 'Управление',
+              char: 'однорычажное'
+            },
+            {
+              name: 'Отверстия для монтажа',
+              char: 'на 1 отвертие'
+            },
+            {
+              name: 'Форма излива',
+              char: 'обычный, поворотный'
+            },
+            {
+              name: 'Глубина',
+              char: '22 см'
+            },
+            {
+              name: 'Страна',
+              char: 'Германия'
+            },
+            {
+              name: 'Подводка',
+              char: 'гибкая'
+            },
+            {
+              name: 'Длина излива',
+              char: '13.9 см'
+            }
+          ]
+
+        li.product__char-name
+          ul.product__char-name-list
+            each char in chars
+              li.product__char-name-item= char.name
+        
+        li.product__char
+          ul.product__char-list
+            each char in chars
+              li.product__char-item= char.char
+          

@@ -1,5 +1,5 @@
-mixin page-desc(text)
-  .page-desc
+mixin page-desc(text, mixes)
+  .page-desc(class=(mixes) && `${mixes}__page-desc`)
     .page-desc__container
       p.page-desc__content= text
       

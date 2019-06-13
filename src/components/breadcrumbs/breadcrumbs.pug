@@ -1,10 +1,10 @@
-mixin breadcrumbs
-  .breadcrumbs
+mixin breadcrumbs(items, mixes)
+  .breadcrumbs(class=(mixes) && `${mixes}__breadcrumbs`)
     ul.breadcrumbs__list
-      each item, idx in ['Главная', 'Каталог', 'Смесители для кухни']
+      each item, idx in items
         li.breadcrumbs__item
           a.breadcrumbs__link(href='#')= item
-          if idx !== 2
+          if idx !== items.length - 1
             ul.breadcrumbs__dots-group
               each dot in [1, 2]
                 li.breadcrumbs__dot

@@ -1,0 +1,20 @@
+extends ../layout.pug 
+
+block content
+  
+  .product-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs(['Главная', 'Каталог', 'Смесители для кухни', 'Смеситель Dorff Logic для раковины'])
+
+    include ./components/product/product
+    +product('product-pg')
+
+    include ./components/other-products/other-products
+    +other-products
+
+    include ../../components/footer/footer
+    +footer

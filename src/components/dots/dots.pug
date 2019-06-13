@@ -1,4 +1,4 @@
-mixin dots
- ul.dots
+mixin dots(mixes)
+ ul.dots(class=(mixes) && `${mixes}__dots`)
     each dot in [1, 2]
       li.dots__item

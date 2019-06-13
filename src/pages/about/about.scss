@@ -1,0 +1,25 @@
+@import '~@/assets/scss/common';
+
+// Common components imports
+@import '~@/components/header/header';
+@import '~@/components/footer/footer';
+@import '~@/components/breadcrumbs/breadcrumbs';
+@import '~@/components/page-title/page-title';
+@import '~@/components/page-desc/page-desc';
+
+// Local components imports
+@import './components/about/about';
+
+// Mixes
+
+.about-pg__breadcrumbs {
+  margin-bottom: 60px;
+}
+
+.about-pg__page-title {
+  @include max-width;
+}
+
+.about-pg__page-desc {
+  margin-bottom: 60px;
+}

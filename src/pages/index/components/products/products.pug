@@ -28,6 +28,6 @@ mixin products
         }
       ]
 
+    include ~@/components/item-card/item-card
     each item in products
-      include ~@/components/item-card/item-card
       +item-card(item)

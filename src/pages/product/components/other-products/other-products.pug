@@ -1,0 +1,32 @@
+mixin other-products(mixes)
+  section.other-products(class=(mixes) && `${mixes}__other-products`)
+    h3.other-products__title Вам также может понравиться:
+    
+    -
+      var products = [
+        {
+          img: require('./components/other-products/img/1.png'),
+          number: 'D3000000',
+          name: 'Logic',
+          desc: 'Смеситель для кухни'
+        },
+        {
+          img: require('./components/other-products/img/2.png'),
+          number: 'D1012000',
+          name: 'Norma',
+          desc: 'Смеситель для кухни'
+        },
+        {
+          img: require('./components/other-products/img/3.png'),
+          number: 'D5000000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        }
+      ]
+
+    ul.other-products__list
+      include ~@/components/item-card/item-card
+      each item in products
+        li.other-products__item
+          +item-card(item)
+    
