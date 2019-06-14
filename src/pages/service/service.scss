@@ -7,10 +7,11 @@
 @import '~@/components/page-title/page-title';
 
 // Local components imports
-@import './components/map/map';
+@import './components/addresses/addresses';
+@import './components/instructions/instructions';
 
 // Mixes
-.map-pg__page-title {
+.service-pg__page-title {
   @include max-width;
   padding: 60px 0;
 }

@@ -19,8 +19,23 @@ mixin footer
 
         li.footer__category
           nav.footer__nav
-            each item in ['О бренде', 'Где купить', 'Обслуживание']
-              a.footer__nav-link(href='#')= item
+            - 
+              var links = [
+                {
+                  name: 'О бренде',
+                  href: 'about.html'
+                },
+                {
+                  name: 'Где купить',
+                  href: 'map.html'
+                },
+                {
+                  name: 'Обслуживание',
+                  href: 'service.html'
+                }
+              ]
+            each link in links
+              a.footer__nav-link(href=`${link.href}`)= link.name
 
       a.footer__logo-link(href='/')
         img.footer__logo(src=require('../../assets/img/logo.svg'))

@@ -1,14 +1,38 @@
 mixin header
   header.header
-    a.header__logo-link(href='/')
-      img.header__logo(src=require('../../assets/img/logo.svg') alt='Логотип')
-    .header__toggle-nav
-      span.header__toggle-nav-inner
-    nav.header__nav
-      each link in ['О бренде', 'Каталог', 'Где купить', 'Обслуживание']
-        a.header__nav-link(href='#')= link
-    .header__bar
-      .header__bar-location
-        include ~@/components/header/img/placeholder.svg
-      .header__bar-search
-        include ~@/components/header/img/search.svg
+    .header__container
+      a.header__logo-link(href='/')
+        img.header__logo(src=require('../../assets/img/logo.svg') alt='Логотип')
+      .header__toggle-nav
+        span.header__toggle-nav-inner
+      nav.header__nav
+        - 
+          var links = [
+            {
+              name: 'О бренде',
+              href: 'about.html'
+            },
+            {
+              name: 'Каталог',
+              href: '#'
+            },
+            {
+              name: 'Где купить',
+              href: 'map.html'
+            },
+            {
+              name: 'Обслуживание',
+              href: 'service.html'
+            }
+          ]
+        each link in links
+          a.header__nav-link(href=`${link.href}`)= link.name
+      .header__bar
+        .header__bar-location
+          include ~@/components/header/img/placeholder.svg
+        .header__bar-search
+          include ~@/components/header/img/search.svg
+          include ~@/components/header/img/close.svg
+
+      include ~@/components/search-panel/search-panel
+      +search-panel

@@ -1,0 +1,125 @@
+.instructions {
+  @include container;
+  margin-bottom: 140px;
+}
+
+.instructions__title {
+  margin-bottom: 30px;
+  color: #1d1d1b;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.instructions__input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.instructions__input {
+  width: 100%;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 54px;
+  color: #1d1d1b;
+  font-size: 11px;
+  line-height: 1;
+  border: 1px solid #f2f2f2;
+
+  &::placeholder {
+    color: #1d1d1b;
+    font-size: 11px;
+    line-height: 1;
+  }
+}
+
+.instructions__icon-loupe {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.instructions__group {
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+
+.instructions__subtitle {
+  margin-bottom: 20px;
+  color: #1d1d1b;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.instructions__list {
+  @include mq-less-lg {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.instructions__item {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #f2f2f2;
+
+  &:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f2f2f2;
+  }
+
+  @include mq-less-lg {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.instructions__item-body {
+  color: #1d1d1b;
+  font-weight: 400;
+  font-size: 14px;
+
+  @include mq-less-lg {
+    margin-bottom: 20px;
+  }
+}
+
+.instructions__item-btn-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @include mq-less-lg {
+    // margin-left: 0;
+  }
+}
+
+.instructions__item-desc {
+  color: #9e9e9e;
+  font-size: 11px;
+}
+
+.instructions__item-btn {
+  margin-left: 120px;
+  padding: 7px 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  background-color: #000;
+
+  &:hover {
+    background-color: #df2727;
+  }
+
+  @include mq-less-lg {
+    margin-left: 20px;
+  }
+}

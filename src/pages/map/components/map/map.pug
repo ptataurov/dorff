@@ -1,0 +1,64 @@
+mixin map
+  section.map
+    .map__wrap
+      .map__container
+
+      .map__search-container
+        fieldset.map__input-group
+          input.map__input(type='text' placeholder='Укажите адрес')
+          img.map__icon-loupe(src=require('./components/map/img/loupe.svg') alt='Иконка лупы')
+        span.map__list-gradient-top
+      
+        .map__address-list-container
+          ul.map__address-list
+            - 
+              var addresses = [
+                {
+                  name: 'Макслевел',
+                  address: 'Олимпийский пр-т, д.16, стр. 2',
+                  distance: '37.39'
+                },
+                {
+                  name: 'Сантехника-Онлайн',
+                  address: 'Московская область, Ленинский район, село Беседы, проезд Промышленный, д. 7',
+                  distance: '37.39'
+                },
+                {
+                  name: 'Студия Света и Сантехники',
+                  address: 'г. Москва, Ленинградское шоссе, д. 25, этаж 2',
+                  distance: '37.39'
+                },
+                {
+                  name: 'Макслевел',
+                  address: 'Олимпийский пр-т, д.16, стр. 2',
+                  distance: '37.39'
+                },
+                {
+                  name: 'Сантехника-Онлайн',
+                  address: 'Московская область, Ленинский район, село Беседы, проезд Промышленный, д. 7',
+                  distance: '37.39'
+                },
+                {
+                  name: 'Студия Света и Сантехники',
+                  address: 'г. Москва, Ленинградское шоссе, д. 25, этаж 2',
+                  distance: '37.39'
+                }
+              ]
+
+            each address in addresses
+              li.map__address
+                img.map__address-location(src=require('./components/map/img/location.svg') alt='Иконка локации')
+                .map__address-body
+                  h6.map__address-name= address.name
+                  p.map__address-self= address.address
+                  .map__address-bottom
+                    .map__address-distance-groupe
+                      img.map__address-icon-nav(src=require('./components/map/img/navigation.svg') alt='Иконка навигации')
+                      p.map__address-distance #{address.distance} км
+                    button.map__address-btn Показать на карте
+        span.map__list-gradient-bottom
+          
+
+
+
+    

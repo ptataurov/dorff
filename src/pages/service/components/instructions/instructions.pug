@@ -1,0 +1,30 @@
+mixin instructions
+  section.instructions
+    h3.instructions__title Инструкции
+    fieldset.instructions__input-group
+      input.instructions__input(type='text', placeholder='По по артикулу или названию')
+      img.instructions__icon-loupe(src=require('./components/instructions/img/loupe.svg') alt='Иконка лупы')
+    .instructions__group
+      h6.instructions__subtitle Смесители для кухни
+      ul.instructions__list
+        each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+          li.instructions__item
+            .instructions__item-body
+              p.instructions__item-name Однорычажный смеситель DORFF Logic для кухонной раковины, хром
+              p.instructions__item-model Logic, D3000000
+            .instructions__item-btn-group
+              p.instructions__item-desc!= 'Инструкция в PDF <br> 350 КБ'
+              a.instructions__item-btn(href='#' download) Скачать
+            
+    .instructions__group
+      h6.instructions__subtitle Смесители для душа
+      ul.instructions__list
+        each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+          li.instructions__item
+            .instructions__item-body
+              p.instructions__item-name Однорычажный смеситель DORFF Logic для кухонной раковины, хром
+              p.instructions__item-model Logic, D3000000
+            .instructions__item-btn-group
+              p.instructions__item-desc!= 'Инструкция в PDF <br> 350 КБ'
+              a.instructions__item-btn(href='#' download) Скачать
+            

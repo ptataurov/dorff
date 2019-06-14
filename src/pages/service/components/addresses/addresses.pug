@@ -1,0 +1,65 @@
+mixin addresses
+  section.addresses
+    .addresses__wrap
+      .addresses__container
+        h3.addresses__title Сервисные центры
+        ul.addresses__list
+          -
+            var addresses = [
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              },
+              {
+                name: 'ООО «Эксперт Сервис»',
+                address: 'Москва, ул. Клинская, д. 6, оф. 4',
+                phone: '+7 (495) 735-45-53',
+                distance: '37.39'
+              }
+            ]
+
+          each address in addresses
+            li.addresses__item
+              h6.addresses__name= address.name
+              p.addresses__contacts!= `${address.address} <br> <a href="tel:">${address.phone}</a>`
+              p.addresses__distance
+                img.addresses__icon-nav(src=require('./components/addresses/img/navigation.svg') alt='Иконка навигации')
+                | #{address.distance} км

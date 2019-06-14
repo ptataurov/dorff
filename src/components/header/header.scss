@@ -1,8 +1,9 @@
+@import '~@/components/search-panel/search-panel';
+
 .header {
-  display: flex;
-  @include max-width;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
 
   &--nav-show {
     align-content: flex-start;
@@ -24,6 +25,23 @@
       }
     }
   }
+
+  &--search-open {
+    .header__icon-search {
+      display: none;
+    }
+
+    .header__icon-close {
+      display: inline;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  @include max-width;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .header__logo-link {
@@ -150,4 +168,8 @@
       }
     }
   }
+}
+
+.header__icon-close {
+  display: none;
 }

@@ -1,0 +1,23 @@
+extends ../layout.pug 
+
+block content
+  
+  .service-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs(['Главная', 'Обслуживание'])
+
+    include ../../components/page-title/page-title
+    +page-title('Обслуживание', 'service-pg')
+
+    include ./components/addresses/addresses
+    +addresses
+
+    include ./components/instructions/instructions
+    +instructions
+
+    include ../../components/footer/footer
+    +footer

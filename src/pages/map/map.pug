@@ -1,0 +1,20 @@
+extends ../layout.pug 
+
+block content
+  
+  .map-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs(['Главная', 'Где купить'])
+
+    include ../../components/page-title/page-title
+    +page-title('Где купить', 'map-pg')
+
+    include ./components/map/map
+    +map
+
+    include ../../components/footer/footer
+    +footer
