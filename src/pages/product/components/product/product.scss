@@ -73,6 +73,11 @@
   }
 }
 
+.product__thumb-img {
+  width: auto;
+  height: 100%;
+}
+
 .product__info {
   width: 50%;
   padding-left: 60px;
@@ -188,6 +193,10 @@
   @include mq-less-sm {
     width: 100%;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .product__nav-icon {
@@ -216,6 +225,10 @@
   color: #e42313;
   font-size: 16px;
   text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .product__chars-title {

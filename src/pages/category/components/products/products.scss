@@ -11,71 +11,51 @@
     justify-content: center;
     margin-bottom: 140px;
 
+    @media (max-width: 1399.98px) {
+      justify-content: flex-start;
+      max-width: 860px;
+    }
+
+    &:hover {
+      .item-card {
+        opacity: 0.5;
+      }
+    }
+
     .item-card {
       flex: 1;
       flex-basis: 33.333333%;
       max-width: 386px;
       padding-top: 30px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:nth-child(3n + 2) {
+        border-right: 1px solid #f2f2f2;
+        border-left: 1px solid #f2f2f2;
+      }
 
       @media (max-width: 1399.98px) {
         flex-basis: 50%;
         max-width: 430px;
 
+        &:nth-child(3n + 2) {
+          border: none;
+        }
+
         &:nth-child(odd) {
-          padding-right: 15px !important;
-          border-right: 1px solid #f2f2f2 !important;
-
-          @include mq-less-lg {
-            padding-right: 0 !important;
-            border-right: none !important;
-          }
-        }
-
-        &:nth-child(even) {
-          padding-left: 15px !important;
-
-          @include mq-less-lg {
-            padding-left: 0 !important;
-          }
-        }
-
-        &:last-child {
-          padding-right: 0 !important;
-          border-right: none !important;
+          border-right: 1px solid #f2f2f2;
         }
       }
 
       @include mq-less-lg {
         flex-basis: 100%;
         max-width: none;
-      }
-
-      &:nth-child(3n + 2) {
-        padding-right: 30px;
-        padding-left: 30px;
-        border-right: 1px solid #f2f2f2;
-        border-left: 1px solid #f2f2f2;
-
-        @media (max-width: 1399.98px) {
-          padding-right: 0;
-          padding-left: 0;
-          border-right: none;
-          border-left: none;
-        }
-      }
-
-      &:nth-child(3n + 1) {
-        padding-right: 30px;
-        @media (max-width: 1399.98px) {
-          padding-right: 0;
-        }
-      }
-
-      &:nth-child(3n + 3) {
-        padding-left: 30px;
-        @media (max-width: 1399.98px) {
-          padding-left: 0;
-        }
+        border-right: none !important;
       }
     }
 

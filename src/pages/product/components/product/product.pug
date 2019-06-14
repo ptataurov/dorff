@@ -7,7 +7,7 @@ mixin product(mixes)
             .product__img-container
               img.product__img(src=require('./components/product/img/photos/1.png') alt='Изображение товара')
             ul.product__thumbs
-              each src in [require('./components/product/img/thumbs/1.png'), require('./components/product/img/thumbs/2.png'), require('./components/product/img/thumbs/3.png'), require('./components/product/img/thumbs/1.png')]
+              each src in [require('./components/product/img/thumbs/1.png'), require('./components/product/img/photos/1.png'), require('./components/product/img/thumbs/3.png'), require('./components/product/img/thumbs/1.png')]
                 li.product__thumb
                   img.product__thumb-img(src=`${src}` alt='Маленькое изображение товара')
 
