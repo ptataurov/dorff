@@ -233,6 +233,11 @@
     @include mq-less-xl {
       max-width: none;
     }
+
+    @include mq-less-sm {
+      width: 100%;
+      word-break: break-all;
+    }
   }
 
   .about__para {

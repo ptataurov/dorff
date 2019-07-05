@@ -7,10 +7,13 @@ mixin product(mixes)
             .product__img-container
               img.product__img(src=require('./components/product/img/photos/1.png') alt='Изображение товара')
             ul.product__thumbs
-              each src in [require('./components/product/img/thumbs/1.png'), require('./components/product/img/photos/1.png'), require('./components/product/img/thumbs/3.png'), require('./components/product/img/thumbs/1.png')]
-                li.product__thumb
-                  img.product__thumb-img(src=`${src}` alt='Маленькое изображение товара')
-
+              each src, idx in [require('./components/product/img/thumbs/1.png'), require('./components/product/img/photos/1.png'), require('./components/product/img/thumbs/3.png')]
+                if (idx === 1)
+                  li.product__thumb.product__thumb--active
+                    img.product__thumb-img(src=`${src}` alt='Маленькое изображение товара')
+                else
+                  li.product__thumb
+                    img.product__thumb-img(src=`${src}` alt='Маленькое изображение товара')
         .product__info
           .product__info-container
             p.product__number D3000000

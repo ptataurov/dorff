@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 const slider = document.querySelector('.banner-slider')
 const slides = slider.querySelectorAll('.banner-slider__slide-img')
 const dots = slider.querySelectorAll('.banner-slider__dot')
@@ -34,6 +36,7 @@ btnNext.addEventListener('click', () => {
   }
 
   slides[activeIdx].classList.remove('banner-slider__slide-img--show')
+
   dots[activeIdx].classList.remove('banner-slider__dot--active')
 
   const newSlide = slides[++activeIdx]
@@ -42,6 +45,7 @@ btnNext.addEventListener('click', () => {
   textContainer.textContent = getText(newSlide)
 
   slides[activeIdx].classList.add('banner-slider__slide-img--show')
+
   dots[activeIdx].classList.add('banner-slider__dot--active')
 
   switchDisabledClass()

@@ -7,6 +7,13 @@ const header = document.querySelector('.header')
 const toggleNav = header.querySelector('.header__toggle-nav')
 
 toggleNav.addEventListener('click', function() {
+  $searchPanel.hide()
+
+  body.classList.remove('darken')
+  body.classList.remove('fixed')
+  header.classList.remove('header--search-open')
+
+  $('.header__nav').slideToggle()
   header.classList.toggle('header--nav-show')
 })
 
@@ -16,13 +23,16 @@ const $searchPanel = $('.search-panel')
 const btnSearch = header.querySelector('.header__bar-search')
 
 btnSearch.addEventListener('click', () => {
-  if ($searchPanel.is(':hidden')) {
-    $searchPanel.slideDown()
-  } else {
-    $searchPanel.hide()
-  }
+  header.querySelector('.header__nav').style.display = null
+  header.classList.remove('header--nav-show')
+  $searchPanel.slideToggle()
 
   body.classList.toggle('darken')
   body.classList.toggle('fixed')
   header.classList.toggle('header--search-open')
+})
+
+window.addEventListener('resize', () => {
+  header.querySelector('.header__nav').style.display = null
+  header.classList.remove('header--nav-show')
 })

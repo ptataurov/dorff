@@ -6,27 +6,29 @@ mixin header
       .header__toggle-nav
         span.header__toggle-nav-inner
       nav.header__nav
-        - 
-          var links = [
-            {
-              name: 'О бренде',
-              href: 'about.html'
-            },
-            {
-              name: 'Каталог',
-              href: '#'
-            },
-            {
-              name: 'Где купить',
-              href: 'map.html'
-            },
-            {
-              name: 'Обслуживание',
-              href: 'service.html'
-            }
-          ]
-        each link in links
-          a.header__nav-link(href=`${link.href}`)= link.name
+        ul.header__nav-list
+          - 
+            var links = [
+              {
+                name: 'О бренде',
+                href: 'about.html'
+              },
+              {
+                name: 'Каталог',
+                href: '#'
+              },
+              {
+                name: 'Где купить',
+                href: 'map.html'
+              },
+              {
+                name: 'Обслуживание',
+                href: 'service.html'
+              }
+            ]
+          each link in links
+            li.header__nav-item
+              a.header__nav-link(href=`${link.href}`)= link.name
       .header__bar
         .header__bar-location
           include ~@/components/header/img/placeholder.svg
