@@ -14,13 +14,12 @@ const instances = pages.map(page => {
 	return new HtmlWebpackPlugin({
 		template: `./pages/${page}/${page}.pug`,
 		filename: `${page}.html`,
-		chunks: ['bundle', page],
-		minify: !isDev
+		chunks: ['common', page]
 	})
 })
 
 const entries = pages.reduce((acc, page) => {
-	acc['bundle'] = `./pages/${page}/${page}.js`
+	acc[page] = `./pages/${page}/${page}.js`
 
 	return acc
 }, {})
@@ -56,14 +55,8 @@ const config = {
 			})
 		],
 		splitChunks: {
-			cacheGroups: {
-				styles: {
-					chunks: 'all',
-					name: 'bundle',
-					test: /\.s?css$/,
-					enforce: true
-				}
-			}
+			chunks: 'all',
+			name: 'common'
 		}
 	},
 	devServer: {
@@ -165,7 +158,8 @@ const config = {
 	plugins: [
 		...instances,
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].css'
+			filename: isDev ? 'css/[name].css' : 'css/[name].[hash].css',
+			chunkFilename: isDev ? 'css/common.css' : 'css/common.[hash].css'
 		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.DefinePlugin({

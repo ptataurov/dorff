@@ -1,6 +1,10 @@
+const path = require('path')
+
 const dirs = {
-  src: './src',
-  components: './src/components',
-  pages: './src/pages'
+	src: path.resolve('./src'),
+	dist: path.resolve('./dist'),
+	pages: path.resolve('./src/pages'),
+	components: path.resolve('./src/components')
 }
+
 module.exports = dirs
