@@ -1,153 +1,151 @@
-// Keyframes
-
-@keyframes slideShow {
-  from {
-    opacity: 0.7;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .banner-slider {
-  position: relative;
+	position: relative;
 }
 
 .banner-slider__body {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 625px;
-  color: #fff;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 625px;
+	color: #fff;
+	transform: translate(-50%, -50%);
 
-  @include mq-less-lg {
-    position: static;
-    clear: both;
-    max-width: none;
-    padding-right: 15px;
-    padding-left: 15px;
-    color: inherit;
-    transform: none;
-  }
+	@include mq-less-lg {
+		position: static;
+		clear: both;
+		max-width: none;
+		padding-right: 15px;
+		padding-left: 15px;
+		color: inherit;
+		transform: none;
+	}
 }
 
 .banner-slider__subtitle {
-  margin-bottom: 20px;
-  color: #b1b1b1;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
+	margin-bottom: 20px;
+	color: #b1b1b1;
+	font-weight: 400;
+	font-size: 14px;
+	text-transform: uppercase;
 
-  @include mq-less-sm {
-    margin-bottom: 10px;
-  }
+	@include mq-less-sm {
+		margin-bottom: 10px;
+	}
 }
 
 .banner-slider__title {
-  margin-bottom: 40px;
-  font-size: 96px;
-  line-height: 1;
-  word-break: break-all;
+	margin-bottom: 40px;
+	font-size: 96px;
+	line-height: 1;
+	word-break: break-all;
 
-  @include mq-less-sm {
-    margin-bottom: 20px;
-    font-size: 48px;
-  }
+	@include mq-less-sm {
+		margin-bottom: 20px;
+		font-size: 48px;
+	}
 }
 
 .banner-slider__slide-img {
-  display: none;
-  width: 100%;
-  height: 100%;
+	display: none;
+	width: 100%;
+	height: 100%;
 
-  &--show {
-    display: inline;
-    animation: slideShow 1000ms;
-  }
+	&--show {
+		display: inline;
+	}
 
-  @include mq-less-lg {
-    float: left;
-  }
+	@include mq-less-lg {
+		float: left;
+	}
 }
 
 .banner-slider__para {
-  margin-bottom: 90px;
-  font-weight: 400;
+	margin-bottom: 90px;
+	font-weight: 400;
 
-  @include mq-less-sm {
-    margin-bottom: 45px;
-  }
+	@include mq-less-sm {
+		margin-bottom: 45px;
+	}
+}
+
+.banner-slider__btn-group {
+	display: flex;
 }
 
 .banner-slider__btn-prev {
-  margin-right: 30px;
-  transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.banner-slider__btn-next {
+	margin-left: 22px;
 }
 
 .banner-slider__btn-prev,
 .banner-slider__btn-next {
-  &:hover {
-    opacity: 0.5;
-  }
+	display: flex;
+	align-items: center;
+	padding: 8px;
 
-  &--disabled {
-    cursor: auto;
-    opacity: 0.5;
-  }
+	&:hover {
+		opacity: 0.5;
+	}
 
-  @include mq-less-lg {
-    svg {
-      path {
-        fill: #000;
-      }
-    }
-  }
+	&--disabled {
+		cursor: auto;
+		opacity: 0.5;
+	}
+
+	@include mq-less-lg {
+		svg {
+			path {
+				fill: #000;
+			}
+		}
+	}
 }
 
 .banner-slider__dots-group {
-  position: absolute;
-  top: 50%;
-  padding: 40px 26px;
-  background-color: #d42425;
-  transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	padding: 40px 26px;
+	background-color: #d42425;
+	transform: translateY(-50%);
 
-  @include mq-less-lg {
-    position: static;
-    display: inline-block;
-    float: right;
-    padding: 26px 40px;
-    transform: translateY(-40%);
-  }
+	@include mq-less-lg {
+		position: static;
+		display: inline-block;
+		float: right;
+		padding: 26px 40px;
+		transform: translateY(-40%);
+	}
 }
 
 .banner-slider__dot {
-  width: 8px;
-  height: 8px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
-    @include mq-less-lg {
-      margin-right: 20px;
-      margin-bottom: 0;
-    }
-  }
+	&:not(:last-child) {
+		margin-bottom: 30px;
+		@include mq-less-lg {
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
+	}
 
-  &:hover {
-    background-color: transparent;
-  }
+	&:hover {
+		background-color: transparent;
+	}
 
-  &--active {
-    background-color: transparent;
-    cursor: auto;
-  }
+	&--active {
+		background-color: transparent;
+		cursor: auto;
+	}
 
-  @include mq-less-lg {
-    display: inline-block;
-  }
+	@include mq-less-lg {
+		display: inline-block;
+	}
 }

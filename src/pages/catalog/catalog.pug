@@ -1,0 +1,50 @@
+extends ../layout.pug 
+
+block content
+  
+  .catalog-pg
+
+    include ../../components/header/header
+    +header
+
+    include ../../components/breadcrumbs/breadcrumbs
+    +breadcrumbs(['Главная', 'Каталог'])
+
+    include ../../components/page-title/page-title
+    +page-title('Каталог', 'catalog-pg')
+
+
+    -
+      const category = [
+        {
+          img: require('./img/item-1.jpg'),
+          name: 'Смесители для умывальника',
+        },
+        {
+          img: require('./img/item-2.jpg'),
+          name: 'Смесители для ванны и душа',
+        },
+        {
+          img: require('./img/item-3.jpg'),
+          name: 'Смесители для душа',
+        },
+        {
+          img: require('./img/item-4.jpg'),
+          name: 'Смесители для кухни',
+        },
+        {
+          img: require('./img/item-5.jpg'),
+          name: 'Душевые комплекты',
+        },
+        {
+          img: require('./img/item-6.jpg'),
+          name: 'Душевые системы',
+        }
+      ]
+
+
+    include ../../components/products/products
+    +products(category, 'category.html', 'catalog-pg')
+
+    include ../../components/footer/footer
+    +footer

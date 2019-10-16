@@ -1,5 +1,3 @@
-import $ from 'jquery'
-
 const slider = document.querySelector('.banner-slider')
 const slides = slider.querySelectorAll('.banner-slider__slide-img')
 const dots = slider.querySelectorAll('.banner-slider__dot')
@@ -17,76 +15,76 @@ const isLastSlide = idx => idx === slides.length - 1
 let activeIdx = 0
 
 const switchDisabledClass = () => {
-  isFirstSlide(activeIdx) &&
-    btnPrev.classList.add('banner-slider__btn-prev--disabled')
+	isFirstSlide(activeIdx) &&
+		btnPrev.classList.add('banner-slider__btn-prev--disabled')
 
-  !isFirstSlide(activeIdx) &&
-    btnPrev.classList.remove('banner-slider__btn-prev--disabled')
+	!isFirstSlide(activeIdx) &&
+		btnPrev.classList.remove('banner-slider__btn-prev--disabled')
 
-  isLastSlide(activeIdx) &&
-    btnNext.classList.add('banner-slider__btn-next--disabled')
+	isLastSlide(activeIdx) &&
+		btnNext.classList.add('banner-slider__btn-next--disabled')
 
-  !isLastSlide(activeIdx) &&
-    btnNext.classList.remove('banner-slider__btn-next--disabled')
+	!isLastSlide(activeIdx) &&
+		btnNext.classList.remove('banner-slider__btn-next--disabled')
 }
 
 btnNext.addEventListener('click', () => {
-  if (isLastSlide(activeIdx)) {
-    return false
-  }
+	if (isLastSlide(activeIdx)) {
+		return false
+	}
 
-  slides[activeIdx].classList.remove('banner-slider__slide-img--show')
+	slides[activeIdx].classList.remove('banner-slider__slide-img--show')
 
-  dots[activeIdx].classList.remove('banner-slider__dot--active')
+	dots[activeIdx].classList.remove('banner-slider__dot--active')
 
-  const newSlide = slides[++activeIdx]
+	const newSlide = slides[++activeIdx]
 
-  titleContainer.textContent = getTitle(newSlide)
-  textContainer.textContent = getText(newSlide)
+	titleContainer.textContent = getTitle(newSlide)
+	textContainer.textContent = getText(newSlide)
 
-  slides[activeIdx].classList.add('banner-slider__slide-img--show')
+	slides[activeIdx].classList.add('banner-slider__slide-img--show')
 
-  dots[activeIdx].classList.add('banner-slider__dot--active')
+	dots[activeIdx].classList.add('banner-slider__dot--active')
 
-  switchDisabledClass()
+	switchDisabledClass()
 })
 
 btnPrev.addEventListener('click', () => {
-  if (isFirstSlide(activeIdx)) {
-    return false
-  }
+	if (isFirstSlide(activeIdx)) {
+		return false
+	}
 
-  slides[activeIdx].classList.remove('banner-slider__slide-img--show')
-  dots[activeIdx].classList.remove('banner-slider__dot--active')
+	slides[activeIdx].classList.remove('banner-slider__slide-img--show')
+	dots[activeIdx].classList.remove('banner-slider__dot--active')
 
-  const newSlide = slides[--activeIdx]
+	const newSlide = slides[--activeIdx]
 
-  titleContainer.textContent = getTitle(newSlide)
-  textContainer.textContent = getText(newSlide)
+	titleContainer.textContent = getTitle(newSlide)
+	textContainer.textContent = getText(newSlide)
 
-  slides[activeIdx].classList.add('banner-slider__slide-img--show')
-  dots[activeIdx].classList.add('banner-slider__dot--active')
+	slides[activeIdx].classList.add('banner-slider__slide-img--show')
+	dots[activeIdx].classList.add('banner-slider__dot--active')
 
-  switchDisabledClass()
+	switchDisabledClass()
 })
 
 for (let i = 0; i <= dots.length - 1; i++) {
-  dots[i].addEventListener('click', () => {
-    if (i === activeIdx) {
-      return false
-    }
+	dots[i].addEventListener('click', () => {
+		if (i === activeIdx) {
+			return false
+		}
 
-    slides[activeIdx].classList.remove('banner-slider__slide-img--show')
-    dots[activeIdx].classList.remove('banner-slider__dot--active')
+		slides[activeIdx].classList.remove('banner-slider__slide-img--show')
+		dots[activeIdx].classList.remove('banner-slider__dot--active')
 
-    const newSlide = slides[(activeIdx = i)]
+		const newSlide = slides[(activeIdx = i)]
 
-    titleContainer.textContent = getTitle(newSlide)
-    textContainer.textContent = getText(newSlide)
+		titleContainer.textContent = getTitle(newSlide)
+		textContainer.textContent = getText(newSlide)
 
-    slides[activeIdx].classList.add('banner-slider__slide-img--show')
-    dots[activeIdx].classList.add('banner-slider__dot--active')
+		slides[activeIdx].classList.add('banner-slider__slide-img--show')
+		dots[activeIdx].classList.add('banner-slider__dot--active')
 
-    switchDisabledClass()
-  })
+		switchDisabledClass()
+	})
 }

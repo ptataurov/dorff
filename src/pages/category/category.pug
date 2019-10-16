@@ -16,9 +16,67 @@ block content
     include ../../components/page-desc/page-desc
     +page-desc('Кухня – сердце дома. Мы хотим, чтобы вам не приходилось ломать голову, как оснастить ее раз и навсегда без ущерба для семейного бюджета. В линейке смесителей для кухни Dorff представлены продукты на любой вкус, различные по дизайну и функционалу, но все их отличает крайне привлекательная цена и внушительная гарантия 5 лет на картридж, корпус и покрытие.')
 
-    include ./components/products/products
-    +products
+    -
+      const products = [
+        {
+          img: require('./img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/3.png'),
+          number: 'D1010000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        },
+        {
+          img: require('./img/3.png'),
+          number: 'D1020000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        },
+        {
+          img: require('./img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/1.png'),
+          number: 'D1000000',
+          name: 'Logic',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/2.png'),
+          number: 'D1002100',
+          name: 'Norma',
+          desc: 'Смеситель для умывальника'
+        },
+        {
+          img: require('./img/3.png'),
+          number: 'D1010000',
+          name: 'Ultra',
+          desc: 'Смеситель Dorff Ultra для раковины'
+        }
+      ]
 
+
+    include ../../components/products/products
+    +products(products, 'product.html')
 
     include ../../components/footer/footer
     +footer

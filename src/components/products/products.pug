@@ -1,0 +1,6 @@
+mixin products(items, link, mixes)
+  section.products(class=(mixes) && `${mixes}__products`)
+
+    each item in items
+      include ~@/components/item-card/item-card
+      +item-card(item, link)
